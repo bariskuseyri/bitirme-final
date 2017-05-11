@@ -11,6 +11,7 @@ import UIKit
 class InspectionViewController: UIViewController {
     
     var ble: BLE?
+//    var bleDelegate: BLEDelegate?
     var infoString: String = ""
     
     override func viewDidLoad() {

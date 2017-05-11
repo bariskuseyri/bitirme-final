@@ -49,6 +49,7 @@ class AutomaticViewController: UIViewController {
     }
     @IBAction func showInspection(_ sender: Any) {
         let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InspectionPopUpID") as! InspectionViewController
+        popoverVC.ble = ble
         self.addChildViewController(popoverVC)
         popoverVC.view.frame = self.view.frame
         self.view.addSubview(popoverVC.view)

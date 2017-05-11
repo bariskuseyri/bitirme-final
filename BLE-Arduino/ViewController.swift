@@ -40,11 +40,10 @@ class ViewController: UIViewController, BLEDelegate {
             automaticViewController.ble = self.bleShield
             }
         if(segue.identifier == "InspectionPopUpID"){
-            guard let InspectionViewController = segue.destination as? InspectionViewController else { return }
-            InspectionViewController.ble = self.bleShield
-            let svc = segue.destination as! InspectionViewController;
-            svc.infoString = string
-            print("svc.detectedString: \(svc.infoString)")
+            guard let inspectionViewController = segue.destination as? InspectionViewController else { return }
+            inspectionViewController.ble = self.bleShield
+            inspectionViewController.infoString = string
+            print("svc.detectedString: \(inspectionViewController.infoString)")
         }
         }
     
